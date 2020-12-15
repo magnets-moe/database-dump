@@ -1,0 +1,239 @@
+{
+  "tables": [
+    {
+      "name": "hash_type",
+      "columns": [
+        {
+          "name": "hash_type",
+          "ty": 23
+        },
+        {
+          "name": "description",
+          "ty": 25
+        },
+        {
+          "name": "created",
+          "ty": 1184
+        }
+      ]
+    },
+    {
+      "name": "rel_torrent_show",
+      "columns": [
+        {
+          "name": "rel_torrent_show_id",
+          "ty": 20
+        },
+        {
+          "name": "show_id",
+          "ty": 20
+        },
+        {
+          "name": "torrent_id",
+          "ty": 20
+        },
+        {
+          "name": "nyaa_id",
+          "ty": 20
+        },
+        {
+          "name": "created",
+          "ty": 1184
+        }
+      ]
+    },
+    {
+      "name": "schedule",
+      "columns": [
+        {
+          "name": "schedule_id",
+          "ty": 20
+        },
+        {
+          "name": "show_id",
+          "ty": 20
+        },
+        {
+          "name": "episode",
+          "ty": 23
+        },
+        {
+          "name": "airs_at",
+          "ty": 1184
+        },
+        {
+          "name": "created",
+          "ty": 1184
+        }
+      ]
+    },
+    {
+      "name": "show",
+      "columns": [
+        {
+          "name": "show_id",
+          "ty": 20
+        },
+        {
+          "name": "anilist_id",
+          "ty": 20
+        },
+        {
+          "name": "season",
+          "ty": 23
+        },
+        {
+          "name": "show_format",
+          "ty": 23
+        },
+        {
+          "name": "created",
+          "ty": 1184
+        }
+      ]
+    },
+    {
+      "name": "show_format",
+      "columns": [
+        {
+          "name": "show_format",
+          "ty": 23
+        },
+        {
+          "name": "description",
+          "ty": 25
+        },
+        {
+          "name": "created",
+          "ty": 1184
+        }
+      ]
+    },
+    {
+      "name": "show_name",
+      "columns": [
+        {
+          "name": "show_name_id",
+          "ty": 20
+        },
+        {
+          "name": "show_id",
+          "ty": 20
+        },
+        {
+          "name": "show_name_type",
+          "ty": 23
+        },
+        {
+          "name": "name",
+          "ty": 25
+        },
+        {
+          "name": "created",
+          "ty": 1184
+        }
+      ]
+    },
+    {
+      "name": "show_name_type",
+      "columns": [
+        {
+          "name": "show_name_type",
+          "ty": 23
+        },
+        {
+          "name": "description",
+          "ty": 25
+        },
+        {
+          "name": "created",
+          "ty": 1184
+        }
+      ]
+    },
+    {
+      "name": "state",
+      "columns": [
+        {
+          "name": "key",
+          "ty": 25
+        },
+        {
+          "name": "value",
+          "ty": 3802
+        },
+        {
+          "name": "created",
+          "ty": 1184
+        }
+      ]
+    },
+    {
+      "name": "torrent",
+      "columns": [
+        {
+          "name": "torrent_id",
+          "ty": 20
+        },
+        {
+          "name": "nyaa_id",
+          "ty": 20
+        },
+        {
+          "name": "hash",
+          "ty": 17
+        },
+        {
+          "name": "hash_type",
+          "ty": 23
+        },
+        {
+          "name": "uploaded_at",
+          "ty": 1184
+        },
+        {
+          "name": "title",
+          "ty": 25
+        },
+        {
+          "name": "size",
+          "ty": 20
+        },
+        {
+          "name": "matched",
+          "ty": 16
+        },
+        {
+          "name": "trusted",
+          "ty": 16
+        },
+        {
+          "name": "created",
+          "ty": 1184
+        }
+      ]
+    }
+  ],
+  "sequences": [
+    {
+      "name": "rel_torrent_show_rel_torrent_show_id_seq",
+      "ty": 20
+    },
+    {
+      "name": "schedule_schedule_id_seq",
+      "ty": 20
+    },
+    {
+      "name": "show_name_show_name_id_seq",
+      "ty": 20
+    },
+    {
+      "name": "show_show_id_seq",
+      "ty": 20
+    },
+    {
+      "name": "torrent_torrent_id_seq",
+      "ty": 20
+    }
+  ]
+}
