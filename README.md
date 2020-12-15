@@ -9,7 +9,7 @@ To load the contents of the dump into a new database, you have to use the `dump`
 Afterwards you can load the database as in the following example. We're assuming the database is called `magnets`:
 
 ```bash
-psql -f ddl/pre-data.sql magnets
+psql -f ddl/pre-data.sql magnets postgres
 dump --connection-string "host=/run/postgresql user=postgres dbname=magnets" load
-psql -f ddl/post-data.sql magnets
+psql -f ddl/post-data.sql magnets postgres
 ```
