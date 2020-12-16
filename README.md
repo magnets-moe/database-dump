@@ -4,7 +4,7 @@ This repository contains a dump of the magnets.moe database. It's updated once p
 
 ## Loading
 
-To load the contents of the dump into a new database, you have to use the `dump` program from https://github.com/mahkoh/magnets.moe. Compile it as described there.
+To load the contents of the dump into a new database, you have to use the `dump` program from https://github.com/magnets-moe/Magnets.moe. Compile it as described there.
 
 Afterwards you can load the database as in the following example. We're assuming the database is called `magnets`:
 
