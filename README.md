@@ -1,4 +1,4 @@
-# magnets.moe-dump
+# database-dump
 
 This repository contains a dump of the magnets.moe database. It's updated once per day.
 
