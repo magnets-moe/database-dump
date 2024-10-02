@@ -2,13 +2,13 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.12 (Debian 13.12-1.pgdg100+1)
--- Dumped by pg_dump version 13.12 (Debian 13.12-1.pgdg100+1)
+-- Dumped from database version 16.3
+-- Dumped by pg_dump version 16.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
+SET client_encoding = 'SQL_ASCII';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
@@ -57,7 +57,7 @@ ALTER FUNCTION magnets.handle_state_update() OWNER TO postgres;
 -- Name: notify_state_change(text); Type: PROCEDURE; Schema: magnets; Owner: postgres
 --
 
-CREATE PROCEDURE magnets.notify_state_change(key text)
+CREATE PROCEDURE magnets.notify_state_change(IN key text)
     LANGUAGE plpgsql
     AS $$
 begin
@@ -67,7 +67,7 @@ end;
 $$;
 
 
-ALTER PROCEDURE magnets.notify_state_change(key text) OWNER TO postgres;
+ALTER PROCEDURE magnets.notify_state_change(IN key text) OWNER TO postgres;
 
 SET default_tablespace = '';
 
@@ -113,7 +113,7 @@ CREATE SEQUENCE magnets.rel_torrent_show_rel_torrent_show_id_seq
     CACHE 1;
 
 
-ALTER TABLE magnets.rel_torrent_show_rel_torrent_show_id_seq OWNER TO postgres;
+ALTER SEQUENCE magnets.rel_torrent_show_rel_torrent_show_id_seq OWNER TO postgres;
 
 --
 -- Name: rel_torrent_show_rel_torrent_show_id_seq; Type: SEQUENCE OWNED BY; Schema: magnets; Owner: postgres
@@ -149,7 +149,7 @@ CREATE SEQUENCE magnets.schedule_schedule_id_seq
     CACHE 1;
 
 
-ALTER TABLE magnets.schedule_schedule_id_seq OWNER TO postgres;
+ALTER SEQUENCE magnets.schedule_schedule_id_seq OWNER TO postgres;
 
 --
 -- Name: schedule_schedule_id_seq; Type: SEQUENCE OWNED BY; Schema: magnets; Owner: postgres
@@ -213,7 +213,7 @@ CREATE SEQUENCE magnets.show_name_show_name_id_seq
     CACHE 1;
 
 
-ALTER TABLE magnets.show_name_show_name_id_seq OWNER TO postgres;
+ALTER SEQUENCE magnets.show_name_show_name_id_seq OWNER TO postgres;
 
 --
 -- Name: show_name_show_name_id_seq; Type: SEQUENCE OWNED BY; Schema: magnets; Owner: postgres
@@ -247,7 +247,7 @@ CREATE SEQUENCE magnets.show_show_id_seq
     CACHE 1;
 
 
-ALTER TABLE magnets.show_show_id_seq OWNER TO postgres;
+ALTER SEQUENCE magnets.show_show_id_seq OWNER TO postgres;
 
 --
 -- Name: show_show_id_seq; Type: SEQUENCE OWNED BY; Schema: magnets; Owner: postgres
@@ -301,7 +301,7 @@ CREATE SEQUENCE magnets.torrent_torrent_id_seq
     CACHE 1;
 
 
-ALTER TABLE magnets.torrent_torrent_id_seq OWNER TO postgres;
+ALTER SEQUENCE magnets.torrent_torrent_id_seq OWNER TO postgres;
 
 --
 -- Name: torrent_torrent_id_seq; Type: SEQUENCE OWNED BY; Schema: magnets; Owner: postgres
